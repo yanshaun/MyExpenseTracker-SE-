@@ -6,8 +6,22 @@
     android:layout_height="match_parent"
     tools:context="com.example.shauny.myexpensetracker.MainActivity">
 
-    <Button
-        android:id="@+id/addbutton"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toStartOf="@+id/addbutton"
+        app:layout_constraintStart_toEndOf="@+id/minusbtn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/circle" />
+
+    <TextView
+        android:id="@+id/dispBalance"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -16,98 +30,55 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="+"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.246" />
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
 
-    <TextView
-        android:id="@+id/dispBalance"
-        android:layout_width="179dp"
-        android:layout_height="39dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="181dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="4dp"
-        android:clickable="false"
-        android:textAllCaps="false"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblLog"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblBalance" />
-
-    <TextView
-        android:id="@+id/dispLog"
-        android:layout_width="179dp"
-        android:layout_height="302dp"
+    <ImageButton
+        android:id="@+id/minusbtn"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addbutton"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/minus" />
 
-    <Button
-        android:id="@+id/minusbtn"
-        android:layout_width="wrap_content"
-        android:layout_height="51dp"
+    <ImageButton
+        android:id="@+id/addbutton"
+        android:layout_width="72dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="140dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <TextView
+        android:id="@+id/dispLog"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="-"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.971"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.427" />
-
-    <TextView
-        android:id="@+id/lblBalance"
-        android:layout_width="179dp"
-        android:layout_height="36dp"
-        android:layout_marginBottom="4dp"
-        android:layout_marginEnd="181dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="181dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="7dp"
-        android:text="Balance"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/dispBalance"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lblLog"
-        android:layout_width="180dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="5dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="76dp"
-        android:layout_marginStart="8dp"
-        android:text="Expenses Log"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/dispLog"
-        app:layout_constraintEnd_toStartOf="@+id/addbutton"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
 </android.support.constraint.ConstraintLayout>

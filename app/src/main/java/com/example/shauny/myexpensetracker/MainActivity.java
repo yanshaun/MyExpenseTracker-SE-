@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -27,14 +28,16 @@ public class MainActivity extends AppCompatActivity{
         setContentView(R.layout.activity_main);
         dispBlnce = (TextView) findViewById(R.id.dispBalance);
         dispLogv = (TextView) findViewById(R.id.dispLog);
-        Button addBtn = (Button) findViewById(R.id.addbutton);
+        ImageButton addBtn = (ImageButton) findViewById(R.id.addbutton);
         addBtn.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+
                 startActivityForResult(new Intent(getApplicationContext(), addMoney.class), 999);
+
             }
         });
-        Button minusButton = (Button) findViewById(R.id.minusbtn);
+        ImageButton minusButton = (ImageButton) findViewById(R.id.minusbtn);
         list = new ArrayList<Log>();
         minusButton.setOnClickListener(new View.OnClickListener() {
 
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity{
             }
 
         });
+
     }
         @Override
         protected void onResume () {
