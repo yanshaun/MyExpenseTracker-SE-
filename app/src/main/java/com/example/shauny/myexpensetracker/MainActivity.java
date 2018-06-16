@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity{
     static int balance;
     static String category;
     static String categoryMinus;
+    static String currency;
     TextView dispLogv;
     static int number;
     static int number1;

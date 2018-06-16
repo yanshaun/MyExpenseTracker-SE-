@@ -8,10 +8,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.TextView;
 
 public class minusMoney extends MainActivity {
 
     EditText amount1;
+    TextView tv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public class minusMoney extends MainActivity {
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
                 if (i == 0) {
@@ -49,6 +52,8 @@ public class minusMoney extends MainActivity {
             }
         });
         minusButton();
+        tv = (TextView) findViewById(R.id.currencyView);
+        tv.setText(currency);
         amount1 = (EditText) findViewById(R.id.amountMinus);
 
     }

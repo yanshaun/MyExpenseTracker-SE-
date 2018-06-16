@@ -13,6 +13,7 @@ import android.widget.Toast;
 public class addMoney extends MainActivity {
 
     EditText amount;
+    TextView tv1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class addMoney extends MainActivity {
             }
         });
         addButton();
+        tv1 = (TextView) findViewById(R.id.currencyView);
+        tv1.setText(currency);
         amount = (EditText) findViewById(R.id.amount);
         dispLogv = (TextView) findViewById(R.id.dispLog);
     }
