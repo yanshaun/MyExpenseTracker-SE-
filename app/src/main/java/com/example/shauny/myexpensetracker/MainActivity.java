@@ -45,8 +45,18 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View v) {
                 startActivityForResult(new Intent(getApplicationContext(), minusMoney.class), 999);
             }
-
         });
+
+        ImageButton settingsButton = (ImageButton) findViewById(R.id.setbtn);
+        settingsButton.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+
+                startActivityForResult(new Intent(getApplicationContext(), Settings.class), 999);
+
+            }
+        });
+
 
     }
         @Override
