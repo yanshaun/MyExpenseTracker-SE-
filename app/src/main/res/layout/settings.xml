@@ -1,24 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/currencyLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="150dp"
+        android:layout_marginStart="50dp"
+        android:text="Select Currency : "
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="111dp"
+        tools:ignore="MissingConstraints" />
 
     <Spinner
-        android:id="@+id/spinner1"
-        android:layout_width="match_parent"
+        android:id="@+id/currencySpinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="150dp"
         android:entries="@array/currency_arrays"
         android:prompt="@string/country_prompt" />
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/btnSubmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="150dp"
         android:text="Submit" />
-</LinearLayout>
+
+</RelativeLayout>
