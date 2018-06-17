@@ -14,6 +14,8 @@ public class minusMoney extends MainActivity {
 
     EditText amount1;
     TextView tv;
+    String curview = CustomOnItemSelectedListener.currency;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +55,7 @@ public class minusMoney extends MainActivity {
         });
         minusButton();
         tv = (TextView) findViewById(R.id.currencyView);
-        tv.setText(currency);
+        tv.setText(curview);
         amount1 = (EditText) findViewById(R.id.amountMinus);
 
     }

@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 public class CustomOnItemSelectedListener extends MainActivity implements OnItemSelectedListener {
+    public static String currency;
 
     public void onItemSelected(AdapterView<?> parent, View view, int pos,long id) {
 
@@ -62,9 +63,9 @@ public class CustomOnItemSelectedListener extends MainActivity implements OnItem
             case 48: currency = "₫";
 
         }
-        Toast.makeText(parent.getContext(),
+        /*Toast.makeText(parent.getContext(),
                 "OnItemSelectedListener : " + parent.getItemAtPosition(pos).toString(),
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();*/
     }
 
     @Override

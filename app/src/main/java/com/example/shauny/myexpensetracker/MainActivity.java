@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity{
     static int balance;
     static String category;
     static String categoryMinus;
-    static String currency;
+    TextView dispLogv;
 
     static int number;
     static int number1;
@@ -68,15 +68,19 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
+<<<<<<< HEAD
 
         initData();
+=======
+        initData();
+
+>>>>>>> 516a00f9be41a476f2b3d5c4496e9a185d0cd692
     }
 
     @Override
     protected void onResume () {
         super.onResume();
         dispBlnce.setText(balance + "");
-
     }
 
     private void initData(){
@@ -101,5 +105,26 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+    private void initData(){
+        mCategory.add("Food");
+        mAmount.add("200.50");
+
+        mCategory.add("Bills");
+        mAmount.add("150.67");
+
+        mCategory.add("Car");
+        mAmount.add("1405.23");
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.expenseLog);
+        LogViewAdapter adapter = new LogViewAdapter(mCategory, mAmount, this);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
 }
+
 

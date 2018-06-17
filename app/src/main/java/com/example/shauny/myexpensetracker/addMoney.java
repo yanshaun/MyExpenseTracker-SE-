@@ -14,6 +14,7 @@ public class addMoney extends MainActivity {
 
     EditText amount;
     TextView tv1;
+    String curview1 = CustomOnItemSelectedListener.currency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,7 +46,7 @@ public class addMoney extends MainActivity {
         });
         addButton();
         tv1 = (TextView) findViewById(R.id.currencyView);
-        tv1.setText(currency);
+        tv1.setText(curview1);
         amount = (EditText) findViewById(R.id.amount);
 
     }
