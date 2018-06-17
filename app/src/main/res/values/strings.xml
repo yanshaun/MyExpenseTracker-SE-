@@ -16,6 +16,7 @@
     </string-array>
 
     <string name="country_prompt">Choose a country</string>
+    <string name="Set">Set</string>
 
     <string-array name="currency_arrays">
         <item>Albania Lek</item>

@@ -3,6 +3,7 @@ package com.example.shauny.myexpensetracker;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class CustomOnItemSelectedListener extends MainActivity implements OnItemSelectedListener {
@@ -71,4 +72,7 @@ public class CustomOnItemSelectedListener extends MainActivity implements OnItem
         // TODO Auto-generated method stub
     }
 
-}
+
+    }
+
+
