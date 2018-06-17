@@ -74,9 +74,9 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="49dp"
+        android:layout_width="50dp"
         android:layout_height="55dp"
         app:srcCompat="@drawable/add"
-        tools:layout_editor_absoluteX="91dp"
+        tools:layout_editor_absoluteX="90dp"
         tools:layout_editor_absoluteY="326dp" />
 </android.support.constraint.ConstraintLayout>

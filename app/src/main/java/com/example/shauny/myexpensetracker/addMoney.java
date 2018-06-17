@@ -17,8 +17,8 @@ public class addMoney extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         getSupportActionBar().setTitle("Add Money");
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.add_money);
         Spinner mySpinner = (Spinner) findViewById(R.id.chooseCategory);
         ArrayAdapter<String> myAdapter =

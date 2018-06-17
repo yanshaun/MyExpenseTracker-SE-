@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity{
     static int number1;
     static String symbol;
 
+    ImageButton addButton, minusButton, settingsButton;
+
     int index;
 
     @Override
@@ -38,8 +40,8 @@ public class MainActivity extends AppCompatActivity{
 
         setContentView(R.layout.activity_main);
         dispBlnce = (TextView) findViewById(R.id.dispBalance);
-        ImageButton addBtn = (ImageButton) findViewById(R.id.addbutton);
-        addBtn.setOnClickListener(new View.OnClickListener() {
+        addButton = (ImageButton) findViewById(R.id.addbtn);
+        addButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
 
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity{
 
             }
         });
-        ImageButton minusButton = (ImageButton) findViewById(R.id.minusbtn);
+        minusButton = (ImageButton) findViewById(R.id.minusbtn);
 
         minusButton.setOnClickListener(new View.OnClickListener() {
 
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-        ImageButton settingsButton = (ImageButton) findViewById(R.id.setbtn);
+        settingsButton = (ImageButton) findViewById(R.id.setbtn);
         settingsButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
@@ -67,10 +69,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
 
-<<<<<<< HEAD
         initData();
-=======
->>>>>>> 8bfc767e22eb3e9490d7498e6da5679da0cf41f1
     }
 
     @Override
