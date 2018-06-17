@@ -23,5 +23,7 @@
 
         <activity android:name=".addMoney"></activity>
         <activity android:name=".minusMoney"></activity>
+        <activity android:name=".Settings"
+            android:label="MyExpenseTracker"/>
     </application>
 </manifest>

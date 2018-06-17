@@ -15,7 +15,7 @@
         <item>Transport</item>
     </string-array>
 
-    <string name="country_prompt">Choose a country</string>
+    <string name="currency_prompt">Choose a currency</string>
     <string name="Set">Set</string>
 
     <string-array name="currency_arrays">
