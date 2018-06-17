@@ -24,12 +24,8 @@ public class MainActivity extends AppCompatActivity{
     static int balance;
     static String category;
     static String categoryMinus;
-<<<<<<< HEAD
     TextView dispLogv;
-=======
-    static String currency;
 
->>>>>>> 2e921c4939ab7681e9802d35816c248c24a1845f
     static int number;
     static int number1;
     static String symbol;
@@ -70,18 +66,14 @@ public class MainActivity extends AppCompatActivity{
             }
         });
 
-
-<<<<<<< HEAD
         initData();
-=======
->>>>>>> 8bfc767e22eb3e9490d7498e6da5679da0cf41f1
+
     }
 
     @Override
     protected void onResume () {
         super.onResume();
         dispBlnce.setText(balance + "");
-
     }
 
     private void initData(){
@@ -106,5 +98,26 @@ public class MainActivity extends AppCompatActivity{
 
 
 
+    private void initData(){
+        mCategory.add("Food");
+        mAmount.add("200.50");
+
+        mCategory.add("Bills");
+        mAmount.add("150.67");
+
+        mCategory.add("Car");
+        mAmount.add("1405.23");
+
+        initRecyclerView();
+    }
+
+    private void initRecyclerView(){
+        RecyclerView recyclerView = findViewById(R.id.expenseLog);
+        LogViewAdapter adapter = new LogViewAdapter(mCategory, mAmount, this);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+    }
+
 }
+
 
