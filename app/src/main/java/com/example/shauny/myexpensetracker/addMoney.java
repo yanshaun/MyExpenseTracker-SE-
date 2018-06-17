@@ -47,7 +47,7 @@ public class addMoney extends MainActivity {
         tv1 = (TextView) findViewById(R.id.currencyView);
         tv1.setText(currency);
         amount = (EditText) findViewById(R.id.amount);
-        dispLogv = (TextView) findViewById(R.id.dispLog);
+
     }
 
     private void addButton() {
@@ -62,8 +62,6 @@ public class addMoney extends MainActivity {
                     number = Integer.parseInt(amount.getText().toString());
                     balance += number;
                     symbol = "+";
-                   Log l1 = new Log(number,symbol,category);
-                   list.add(l1);
 
                 }
         finish();
