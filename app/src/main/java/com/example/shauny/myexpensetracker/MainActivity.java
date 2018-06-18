@@ -14,7 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     //recyclerview
     private ArrayList<String> mCategory = new ArrayList<>();
@@ -71,12 +71,12 @@ public class MainActivity extends AppCompatActivity{
     }
 
     @Override
-    protected void onResume () {
+    protected void onResume() {
         super.onResume();
         dispBlnce.setText(balance + "");
     }
 
-    private void initData(){
+    private void initData() {
         mCategory.add("Food");
         mAmount.add("200.50");
 
@@ -89,35 +89,12 @@ public class MainActivity extends AppCompatActivity{
         initRecyclerView();
     }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.expenseLog);
         LogViewAdapter adapter = new LogViewAdapter(mCategory, mAmount, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
-
-
-
-    private void initData(){
-        mCategory.add("Food");
-        mAmount.add("200.50");
-
-        mCategory.add("Bills");
-        mAmount.add("150.67");
-
-        mCategory.add("Car");
-        mAmount.add("1405.23");
-
-        initRecyclerView();
-    }
-
-    private void initRecyclerView(){
-        RecyclerView recyclerView = findViewById(R.id.expenseLog);
-        LogViewAdapter adapter = new LogViewAdapter(mCategory, mAmount, this);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-    }
-
 }
 
 

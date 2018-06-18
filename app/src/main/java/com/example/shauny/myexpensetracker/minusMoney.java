@@ -36,16 +36,19 @@ public class minusMoney extends MainActivity {
                     categoryMinus = "Eating Out";
                 }
                 if (i == 1) {
-                    categoryMinus = "Car";
-                }
-                if (i == 2) {
                     categoryMinus = "Clothes";
                 }
+                if (i == 2) {
+                    categoryMinus = "Food";
+                }
                 if (i == 3) {
-                    categoryMinus = "House";
+                    categoryMinus = "Bills";
                 }
                 if (i == 4) {
-                    categoryMinus = "Transport";
+                    categoryMinus = "Entertainment";
+                }
+                if (i == 5) {
+                    categoryMinus = "Others";
                 }
             }
 
