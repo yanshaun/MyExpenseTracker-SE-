@@ -59,23 +59,24 @@ public class minusMoney extends MainActivity {
         amount1 = (EditText) findViewById(R.id.amountMinus);
 
     }
-        private void minusButton() {
 
-            Button btn = (Button) findViewById(R.id.subtractBtn);
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(amount1.getText().toString().trim().isEmpty()){
-                        Toast.makeText(minusMoney.this, "You did not enter a number", Toast.LENGTH_SHORT).show();
-                        return;
-                    }else {
-                        number1 = Integer.parseInt(amount1.getText().toString());
-                        balance = balance - number1;
-                        symbol = "-";
-                    }
-                    finish();
+    private void minusButton() {
+
+        Button btn = (Button) findViewById(R.id.subtractBtn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(amount1.getText().toString().trim().isEmpty()){
+                    Toast.makeText(minusMoney.this, "You did not enter a number", Toast.LENGTH_SHORT).show();
+                    return;
+                }else {
+                    number1 = Integer.parseInt(amount1.getText().toString());
+                    balance = balance - number1;
+                    symbol = "-";
                 }
-            });
-        }
+                finish();
+            }
+        });
+    }
 
 }

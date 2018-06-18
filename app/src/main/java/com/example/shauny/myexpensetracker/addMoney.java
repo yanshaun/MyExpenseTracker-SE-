@@ -65,7 +65,7 @@ public class addMoney extends MainActivity {
                     symbol = "+";
 
                 }
-        finish();
+                finish();
             }
         });
     }

@@ -2,12 +2,12 @@
     <string name="app_name">MyExpenseTracker</string>
     <string name="add">+</string>
     <string name="minus">-</string>
-    <string-array name="savingsCategory">
+    <string-array name="incomeCategory">
         <item>Income</item>
         <item>Savings</item>
         <item>Allowance</item>
     </string-array>
-    <string-array name="expensesCategory">
+    <string-array name="expenseCategory">
         <item>Eating Out</item>
         <item>Car</item>
         <item>Clothes</item>
