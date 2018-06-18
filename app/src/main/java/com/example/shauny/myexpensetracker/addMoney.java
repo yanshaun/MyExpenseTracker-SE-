@@ -18,26 +18,34 @@ public class addMoney extends MainActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+<<<<<<< HEAD
         getSupportActionBar().setTitle("Add Money");
         super.onCreate(savedInstanceState);
+=======
+        super.onCreate(savedInstanceState);
+        getSupportActionBar().setTitle("Income");
+>>>>>>> 996f53eb7069e0af5bc21e4ed694ebbb9d93545c
         setContentView(R.layout.add_money);
         Spinner mySpinner = (Spinner) findViewById(R.id.chooseCategory);
         ArrayAdapter<String> myAdapter =
                 new ArrayAdapter<String>(addMoney.this, android.R.layout.simple_list_item_1,
-                        getResources().getStringArray(R.array.savingsCategory));
+                        getResources().getStringArray(R.array.incomeCategory));
         myAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mySpinner.setAdapter(myAdapter);
         mySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int i, long id) {
                 if (i == 0) {
-                    category = "Income";
+                    category = "Salary";
                 }
                 if (i == 1) {
-                    category = "Savings";
+                    category = "Allowance";
                 }
                 if (i == 2) {
-                    category = "Allowance";
+                    category = "Deposits";
+                }
+                if (i == 3) {
+                    category = "Others";
                 }
             }
             @Override

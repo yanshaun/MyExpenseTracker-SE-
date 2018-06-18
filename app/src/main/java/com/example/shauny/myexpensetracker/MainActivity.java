@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     //recyclerview
     private ArrayList<String> mCategory = new ArrayList<>();
@@ -73,12 +73,12 @@ public class MainActivity extends AppCompatActivity{
     }
 
     @Override
-    protected void onResume () {
+    protected void onResume() {
         super.onResume();
         dispBlnce.setText(balance + "");
     }
 
-    private void initData(){
+    private void initData() {
         mCategory.add("Food");
         mAmount.add("200.50");
 
@@ -91,13 +91,16 @@ public class MainActivity extends AppCompatActivity{
         initRecyclerView();
     }
 
-    private void initRecyclerView(){
+    private void initRecyclerView() {
         RecyclerView recyclerView = findViewById(R.id.expenseLog);
         LogViewAdapter adapter = new LogViewAdapter(mCategory, mAmount, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 996f53eb7069e0af5bc21e4ed694ebbb9d93545c
 }
 
 
